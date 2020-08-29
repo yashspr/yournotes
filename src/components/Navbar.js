@@ -14,7 +14,7 @@ const Navbar = ({ isUserLoggedIn, setIsUserLoggedIn, fetchNotes }) => {
 		);
 		window.addEventListener('message', function (event) {
 			console.log(event);
-			if (event.origin !== 'https://yournotes-backend.herokuapp.com/') {
+			if (event.origin !== 'https://yournotes-backend.herokuapp.com') {
 				return;
 			}
 			if (event.data === 'success') {
