@@ -8,7 +8,7 @@ const session = require('express-session');
 const MongoStore = require('connect-mongo')(session);
 const cors = require('cors');
 
-mongoose.connect('mongodb://localhost/notes_application', {
+mongoose.connect(process.env.mongoUri, {
 	useNewUrlParser: true,
 	useUnifiedTopology: true,
 });
@@ -45,7 +45,6 @@ var session_config = {
 
 if (app.get('env') === 'production') {
 	app.set('trust proxy', 1); // trust first proxy
-	session_config.cookie.secure = true; // serve secure cookies
 }
 
 // Loading Routes
@@ -71,4 +70,6 @@ app.post('/test', (req, res) => {
 	res.end();
 });
 
-app.listen(4000, () => console.log('Server started on port 4000'));
+const PORT = process.env.PORT || 4000;
+
+app.listen(PORT, () => console.log('Server started on port 4000'));

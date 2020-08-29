@@ -11,7 +11,6 @@ import { addNewNote, deleteNote } from '../redux/notes/notes.actions';
 import { syncNotes } from '../redux/notes/notes.thunks';
 import { setVisibleNoteId } from '../redux/visibleNoteId/visibleNoteId.actions';
 import { setMarkdownPreview } from '../redux/options/options.actions';
-import { mostRecentNoteId } from '../redux/visibleNoteId/visibleNoteId.selector';
 
 const EditorToolbar = ({
 	visibleNoteId,

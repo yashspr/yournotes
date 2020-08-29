@@ -8,13 +8,13 @@ import { loadNotes } from '../redux/notes/notes.thunks';
 const Navbar = ({ isUserLoggedIn, setIsUserLoggedIn, fetchNotes }) => {
 	const signIn = () => {
 		window.open(
-			'http://localhost:4000/auth/login',
+			'https://yournotes-backend.herokuapp.com/',
 			'login',
 			'width=452,height=633,menubar=no,toolbar=no,location=no'
 		);
 		window.addEventListener('message', function (event) {
 			console.log(event);
-			if (event.origin !== 'http://localhost:4000') {
+			if (event.origin !== 'https://yournotes-backend.herokuapp.com/') {
 				return;
 			}
 			if (event.data === 'success') {
