@@ -23,11 +23,15 @@ const app = express();
 
 app.use(
 	cors({
-		origin: 'http://localhost:3000',
+		origin: 'https://yournotes-yashas.netlify.app/',
 		optionsSuccessStatus: 200,
 		credentials: true,
 	})
 );
+
+if (app.get('env') === 'production') {
+	app.set('trust proxy', 1); // trust first proxy
+}
 
 app.set('view engine', 'pug');
 app.set('views', 'backend/views');
