@@ -1,0 +1,10 @@
+.editor-toolbar {
+	padding: 1rem;
+	border-bottom: 1px solid $color-dark-1;
+	display: flex;
+	justify-content: flex-end;
+
+	.sync-btn {
+		margin-right: auto !important;
+	}
+}

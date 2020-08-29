@@ -1,0 +1,20 @@
+.btn {
+	padding: 0.5rem;
+	cursor: pointer;
+	border: none;
+	border-radius: 3px;
+
+	&:not(:last-child) {
+		margin-right: 0.75rem;
+	}
+
+	&-primary {
+		background-color: $color-primary-light;
+		color: white;
+		transition: all 0.4s;
+
+		&:hover {
+			background-color: $color-primary-dark;
+		}
+	}
+}

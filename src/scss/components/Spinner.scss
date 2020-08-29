@@ -1,0 +1,28 @@
+.spinner-container {
+	position: relative;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background-color: white;
+
+	.spinner {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+
+		.primary {
+			color: $color-primary;
+		}
+
+		.white {
+			color: $color-white-1;
+		}
+
+		p {
+			transform: translateX(-37%);
+			margin-top: 2rem;
+		}
+	}
+}

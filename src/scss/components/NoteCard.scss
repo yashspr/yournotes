@@ -1,0 +1,17 @@
+.note-card {
+	padding: 1.5rem 1rem;
+	cursor: pointer;
+	box-shadow: $note-card-shadow;
+
+	&:not(:last-child) {
+		border-bottom: 1px solid $color-dark-1;
+	}
+
+	&--selected {
+		background-color: $color-white-2;
+	}
+
+	&__title {
+		font-size: 1.6rem;
+	}
+}
