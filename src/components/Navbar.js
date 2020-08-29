@@ -8,7 +8,7 @@ import { loadNotes } from '../redux/notes/notes.thunks';
 const Navbar = ({ isUserLoggedIn, setIsUserLoggedIn, fetchNotes }) => {
 	const signIn = () => {
 		window.open(
-			'https://yournotes-backend.herokuapp.com/',
+			'https://yournotes-backend.herokuapp.com/auth/login',
 			'login',
 			'width=452,height=633,menubar=no,toolbar=no,location=no'
 		);
