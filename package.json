@@ -39,7 +39,7 @@
 		"backend": "nodemon backend/index.js",
 		"web": "node backend/index.js",
 		"start": "npm-run-all -p frontend backend",
-		"build": "react-scripts build",
+		"build": "CI= react-scripts build",
 		"test": "react-scripts test",
 		"eject": "react-scripts eject"
 	},
