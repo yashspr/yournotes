@@ -23,7 +23,7 @@ const app = express();
 
 app.use(
 	cors({
-		origin: 'https://yournotes-yashas.netlify.app/',
+		origin: 'https://yournotes-yashas.netlify.app',
 		optionsSuccessStatus: 200,
 		credentials: true,
 	})
